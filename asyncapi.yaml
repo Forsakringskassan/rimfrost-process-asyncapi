@@ -5,34 +5,34 @@ info:
   description: Initiering av flöde för hantering av Vård av husdjur
 
 channels:
-  vah.kundbehovsflode.requests:
-    address: vah.kundbehovsflode.requests
+  vah.handlaggning.requests:
+    address: vah.handlaggning.requests
     messages:
-      VahKundbehovsflodeRequestMessage:
-        $ref: "#/components/messages/VahKundbehovsflodeRequestMessage"
+      VahHandlaggningRequestMessage:
+        $ref: "#/components/messages/VahHandlaggningRequestMessage"
 
-  vah.kundbehovsflode.responses:
-    address: vah.kundbehovsflode.responses
+  vah.handlaggning.responses:
+    address: vah.handlaggning.responses
     messages:
-      VahKundbehovsflodeResponseMessage:
-        $ref: "#/components/messages/VahKundbehovsflodeResponseMessage"
+      VahHandlaggningResponseMessage:
+        $ref: "#/components/messages/VahHandlaggningResponseMessage"
 
 operations:
-  VahKundbehovsflodeRequest:
+  VahHandlaggningRequest:
     action: receive
     summary: Initiering av flöde för hantering av Vård av husdjur
     channel:
-      $ref: "#/channels/vah.kundbehovsflode.requests"
+      $ref: "#/channels/vah.handlaggning.requests"
     reply:
       address:
         description: Resultatet skickas tillbaka till originator.
         location: "$message.header#/replyTo"
       channel:
-        $ref: "#/channels/vah.kundbehovsflode.responses"
+        $ref: "#/channels/vah.handlaggning.responses"
 
 components:
   schemas:
-    VahKundbehovsflodeRequestMessageHeaders:
+    VahHandlaggningRequestMessageHeaders:
       type: object
       properties:
         replyTo:
@@ -43,65 +43,65 @@ components:
           format: uuid
           description: Unikt ID som kopplar ihop request & response
 
-    VahKundbehovsflodeResponseMessageHeaders:
+    VahHandlaggningResponseMessageHeaders:
       type: object
       properties:
         correlationId:
           type: string
           description: Unikt ID som kopplar ihop request & response
 
-    VahKundbehovsflodeRequestMessageData:
+    VahHandlaggningRequestMessageData:
       type: object
-      title: VahKundbehovsflodeRequestMessageData
+      title: VahHandlaggningRequestMessageData
       required:
-        - kundbehovsflodeId
+        - handlaggningId
       properties:
-        kundbehovsflodeId:
+        handlaggningId:
           type: string
           format: uuid
-          description: Kundbehovsflöde id
+          description: Unikt ID som identifierar handläggningsärendet
 
-    VahKundbehovsflodeResponseMessageData:
+    VahHandlaggningResponseMessageData:
       type: object
-      title: VahKundbehovsflodeResponseMessageData
+      title: VahHandlaggningResponseMessageData
       required:
-        - kundbehovsflodeId
+        - handlaggningId
         - resultat
       properties:
-        kundbehovsflodeId:
+        handlaggningId:
           type: string
           format: uuid
-          description: Kundbehovsflöde id
+          description: Unikt ID som identifierar handläggningsärendet
         resultat:
           type: string
 
   messages:
-    VahKundbehovsflodeRequestMessage:
+    VahHandlaggningRequestMessage:
       headers:
-        $ref: "#/components/schemas/VahKundbehovsflodeRequestMessageHeaders"
+        $ref: "#/components/schemas/VahHandlaggningRequestMessageHeaders"
       payload:
-        title: VahKundbehovsflodeRequestMessagePayload
+        title: VahHandlaggningRequestMessagePayload
         allOf:
           - $ref: "kogito-cloudevent.yaml#/components/schemas/KogitoCloudEvent"
           - type: object
-            title: VahKundbehovsflodeRequestMessageData
+            title: VahHandlaggningRequestMessageData
             required:
               - data
             properties:
               data:
-                $ref: "#/components/schemas/VahKundbehovsflodeRequestMessageData"
+                $ref: "#/components/schemas/VahHandlaggningRequestMessageData"
 
-    VahKundbehovsflodeResponseMessage:
+    VahHandlaggningResponseMessage:
       headers:
-        $ref: "#/components/schemas/VahKundbehovsflodeResponseMessageHeaders"
+        $ref: "#/components/schemas/VahHandlaggningResponseMessageHeaders"
       payload:
-        title: VahKundbehovsflodeResponseMessagePayload
+        title: VahHandlaggningResponseMessagePayload
         allOf:
           - $ref: "kogito-cloudevent.yaml#/components/schemas/KogitoCloudEvent"
           - type: object
-            title: VahKundbehovsflodeResponseMessageData
+            title: VahHandlaggningResponseMessageData
             required:
               - data
             properties:
               data:
-                $ref: "#/components/schemas/VahKundbehovsflodeResponseMessageData"
+                $ref: "#/components/schemas/VahHandlaggningResponseMessageData"
