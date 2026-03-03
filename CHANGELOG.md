@@ -1,3 +1,9 @@
+## 0.1.3 (2026-03-03)
+
+### Bug Fixes
+
+-  Rename kundbehovsflode to handlaggning ([89926](https://github.com/Forsakringskassan/rimfrost-process-vah-asyncapi/commit/89926dbb3591107) Lars Persson)  
+
 ## 0.1.2 (2025-11-25)
 
 ### Bug Fixes
