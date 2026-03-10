@@ -1,38 +1,38 @@
 asyncapi: 3.0.0
 info:
-  title: Process - Vård av husdjur Async API
+  title: Rimfrost Process Async API
   version: 1.0.0
-  description: Initiering av flöde för hantering av Vård av husdjur
+  description: Initiering av rimfrost processflöde
 
 channels:
-  vah.handlaggning.requests:
-    address: vah.handlaggning.requests
+  handlaggning.requests:
+    address: handlaggning.requests
     messages:
-      VahHandlaggningRequestMessage:
-        $ref: "#/components/messages/VahHandlaggningRequestMessage"
+      HandlaggningRequestMessage:
+        $ref: "#/components/messages/HandlaggningRequestMessage"
 
-  vah.handlaggning.responses:
-    address: vah.handlaggning.responses
+  handlaggning.responses:
+    address: handlaggning.responses
     messages:
-      VahHandlaggningResponseMessage:
-        $ref: "#/components/messages/VahHandlaggningResponseMessage"
+      HandlaggningResponseMessage:
+        $ref: "#/components/messages/HandlaggningResponseMessage"
 
 operations:
-  VahHandlaggningRequest:
+  HandlaggningRequest:
     action: receive
-    summary: Initiering av flöde för hantering av Vård av husdjur
+    summary: Initiering av processflöde
     channel:
-      $ref: "#/channels/vah.handlaggning.requests"
+      $ref: "#/channels/handlaggning.requests"
     reply:
       address:
         description: Resultatet skickas tillbaka till originator.
         location: "$message.header#/replyTo"
       channel:
-        $ref: "#/channels/vah.handlaggning.responses"
+        $ref: "#/channels/handlaggning.responses"
 
 components:
   schemas:
-    VahHandlaggningRequestMessageHeaders:
+    HandlaggningRequestMessageHeaders:
       type: object
       properties:
         replyTo:
@@ -43,16 +43,16 @@ components:
           format: uuid
           description: Unikt ID som kopplar ihop request & response
 
-    VahHandlaggningResponseMessageHeaders:
+    HandlaggningResponseMessageHeaders:
       type: object
       properties:
         correlationId:
           type: string
           description: Unikt ID som kopplar ihop request & response
 
-    VahHandlaggningRequestMessageData:
+    HandlaggningRequestMessageData:
       type: object
-      title: VahHandlaggningRequestMessageData
+      title: HandlaggningRequestMessageData
       required:
         - handlaggningId
       properties:
@@ -61,9 +61,9 @@ components:
           format: uuid
           description: Unikt ID som identifierar handläggningsärendet
 
-    VahHandlaggningResponseMessageData:
+    HandlaggningResponseMessageData:
       type: object
-      title: VahHandlaggningResponseMessageData
+      title: HandlaggningResponseMessageData
       required:
         - handlaggningId
         - resultat
@@ -76,32 +76,32 @@ components:
           type: string
 
   messages:
-    VahHandlaggningRequestMessage:
+    HandlaggningRequestMessage:
       headers:
-        $ref: "#/components/schemas/VahHandlaggningRequestMessageHeaders"
+        $ref: "#/components/schemas/HandlaggningRequestMessageHeaders"
       payload:
-        title: VahHandlaggningRequestMessagePayload
+        title: HandlaggningRequestMessagePayload
         allOf:
           - $ref: "kogito-cloudevent.yaml#/components/schemas/KogitoCloudEvent"
           - type: object
-            title: VahHandlaggningRequestMessageData
+            title: HandlaggningRequestMessageData
             required:
               - data
             properties:
               data:
-                $ref: "#/components/schemas/VahHandlaggningRequestMessageData"
+                $ref: "#/components/schemas/HandlaggningRequestMessageData"
 
-    VahHandlaggningResponseMessage:
+    HandlaggningResponseMessage:
       headers:
-        $ref: "#/components/schemas/VahHandlaggningResponseMessageHeaders"
+        $ref: "#/components/schemas/HandlaggningResponseMessageHeaders"
       payload:
-        title: VahHandlaggningResponseMessagePayload
+        title: HandlaggningResponseMessagePayload
         allOf:
           - $ref: "kogito-cloudevent.yaml#/components/schemas/KogitoCloudEvent"
           - type: object
-            title: VahHandlaggningResponseMessageData
+            title: HandlaggningResponseMessageData
             required:
               - data
             properties:
               data:
-                $ref: "#/components/schemas/VahHandlaggningResponseMessageData"
+                $ref: "#/components/schemas/HandlaggningResponseMessageData"
