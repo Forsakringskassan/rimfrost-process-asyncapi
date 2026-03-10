@@ -1,3 +1,9 @@
+## 0.1.4 (2026-03-10)
+
+### Bug Fixes
+
+-  Drop "Vah" from names since the api is generic ([26e94](https://github.com/Forsakringskassan/rimfrost-process-asyncapi/commit/26e94a1138336c0) Lars Persson)  
+
 ## 0.1.3 (2026-03-03)
 
 ### Bug Fixes
