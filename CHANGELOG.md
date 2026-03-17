@@ -1,3 +1,12 @@
+## 0.1.5 (2026-03-17)
+
+### Bug Fixes
+
+-  Add yrkandeId to HandlaggningRequestMessageData ([0c0c6](https://github.com/Forsakringskassan/rimfrost-process-asyncapi/commit/0c0c6dceecdd733) Lars Persson)  
+
+### Dependency updates
+
+- update gradle to v9.4.0 ([8ca52](https://github.com/Forsakringskassan/rimfrost-process-asyncapi/commit/8ca527abb3470e9) renovate[bot])  
 ## 0.1.4 (2026-03-10)
 
 ### Bug Fixes
