@@ -1,3 +1,9 @@
+## 0.1.6 (2026-03-17)
+
+### Bug Fixes
+
+-  Revert "fix: Add yrkandeId to HandlaggningRequestMessageData" ([9c8a7](https://github.com/Forsakringskassan/rimfrost-process-asyncapi/commit/9c8a74587a0b105) Lars Persson)  
+
 ## 0.1.5 (2026-03-17)
 
 ### Bug Fixes
