@@ -54,13 +54,8 @@ components:
       type: object
       title: HandlaggningRequestMessageData
       required:
-        - yrkandeId
         - handlaggningId
       properties:
-        yrkandeId:
-          type: string
-          format: uuid
-          description: Unikt ID som identifierar yrkandet
         handlaggningId:
           type: string
           format: uuid
@@ -70,14 +65,9 @@ components:
       type: object
       title: HandlaggningResponseMessageData
       required:
-        - yrkandeId
         - handlaggningId
         - resultat
       properties:
-        yrkandeId:
-          type: string
-          format: uuid
-          description: Unikt ID som identifierar yrkandet
         handlaggningId:
           type: string
           format: uuid
