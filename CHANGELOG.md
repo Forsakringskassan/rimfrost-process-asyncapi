@@ -1,3 +1,11 @@
+## 0.1.7 (2026-04-28)
+
+### Dependency updates
+
+- update gradle to v9.4.1 ([f2ce2](https://github.com/Forsakringskassan/rimfrost-process-asyncapi/commit/f2ce2b5fb2dfe9b) renovate[bot])  
+### Other changes
+
+
 ## 0.1.6 (2026-03-17)
 
 ### Bug Fixes
