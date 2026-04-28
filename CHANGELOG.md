@@ -1,3 +1,13 @@
+## 1.0.0 (2026-04-28)
+
+### Breaking changes
+
+-  release 1.0 ([a5ea4](https://github.com/Forsakringskassan/rimfrost-process-asyncapi/commit/a5ea42a250d37ac) Lars Persson)  
+
+### Features
+
+-  release 1.0 ([a5ea4](https://github.com/Forsakringskassan/rimfrost-process-asyncapi/commit/a5ea42a250d37ac) Lars Persson)  
+
 ## 0.1.7 (2026-04-28)
 
 ### Dependency updates
