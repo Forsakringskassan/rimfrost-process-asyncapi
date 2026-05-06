@@ -61,6 +61,20 @@ components:
           format: uuid
           description: Unikt ID som identifierar handläggningsärendet
 
+    HandlaggningErrorInformation:
+      type: object
+      title: HandlaggningErrorInformation
+      required:
+        - felkod
+        - felmeddelande
+      properties:
+        felkod:
+          type: string
+          description: Maskinsläsbar felkod, t.ex. INTERN_FEL
+        felmeddelande:
+          type: string
+          description: Beskrivning av vad som gick fel
+
     HandlaggningResponseMessageData:
       type: object
       title: HandlaggningResponseMessageData
@@ -74,6 +88,11 @@ components:
           description: Unikt ID som identifierar handläggningsärendet
         resultat:
           type: string
+          description: Utfall av handläggningen, t.ex. GODKÄND eller EJ GODKÄND. Vid fel sätts värdet till FEL.
+        error:
+          $ref: "#/components/schemas/HandlaggningErrorInformation"
+          description: Finns endast när ett fel uppstått, annars null
+          nullable: true
 
   messages:
     HandlaggningRequestMessage:
