@@ -1,3 +1,9 @@
+## 1.2.0 (2026-05-08)
+
+### Features
+
+-  Cleanup CHANGELOG.md and bump version number ([d1182](https://github.com/Forsakringskassan/rimfrost-process-asyncapi/commit/d1182cc53af2387) Lars Persson)  
+
 # rimfrost-process-asyncapi changelog
 
 Changelog of rimfrost-process-asyncapi.
