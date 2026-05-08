@@ -1,38 +1,6 @@
-## 1.1.0 (2026-05-06)
+# rimfrost-process-asyncapi changelog
 
-### Dependency updates
-
-- update gradle to v9.5.0 ([9f42e](https://github.com/Forsakringskassan/rimfrost-process-asyncapi/commit/9f42eecd17c2bc5) renovate[bot])  
-### Other changes
-
-**docs/FKPOC-697: add error handling documentation to README**
-
-
-[1ee24](https://github.com/Forsakringskassan/rimfrost-process-asyncapi/commit/1ee248d07b7ed56) Jorgen Lindstrom *2026-05-05 14:30:06*
-
-**feat/FKPOC: uppdatera process-asyncapi med felhantering**
-
-
-[c3463](https://github.com/Forsakringskassan/rimfrost-process-asyncapi/commit/c3463fbb82db5ef) Jorgen Lindstrom *2026-05-05 12:53:43*
-
-
-## 1.1.0 (2026-05-06)
-
-### Dependency updates
-
-- update gradle to v9.5.0 ([9f42e](https://github.com/Forsakringskassan/rimfrost-process-asyncapi/commit/9f42eecd17c2bc5) renovate[bot])  
-### Other changes
-
-**docs/FKPOC-697: add error handling documentation to README**
-
-
-[1ee24](https://github.com/Forsakringskassan/rimfrost-process-asyncapi/commit/1ee248d07b7ed56) Jorgen Lindstrom *2026-05-05 14:30:06*
-
-**feat/FKPOC: uppdatera process-asyncapi med felhantering**
-
-
-[c3463](https://github.com/Forsakringskassan/rimfrost-process-asyncapi/commit/c3463fbb82db5ef) Jorgen Lindstrom *2026-05-05 12:53:43*
-
+Changelog of rimfrost-process-asyncapi.
 
 ## 1.1.0 (2026-05-06)
 
