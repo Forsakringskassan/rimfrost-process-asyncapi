@@ -15,7 +15,7 @@ import java.util.Objects;
 public class HandlaggningRequestMessageData implements Serializable
 {
    private static final long serialVersionUID = 1L;
-   @JsonProperty("handlaggningId")
+   @JsonProperty(required = true)
    private String handlaggningId;
    @JsonAnySetter
    @JsonInclude(Include.NON_NULL)
@@ -74,8 +74,8 @@ public class HandlaggningRequestMessageData implements Serializable
 
    public String toString()
    {
-      String var10000 = this.toIndentedString(this.handlaggningId);
-      return "class HandlaggningRequestMessageData {\n    handlaggningId: " + var10000 + "\n    additionalProperties: "
+      return "class HandlaggningRequestMessageData {\n    handlaggningId: " + this.toIndentedString(this.handlaggningId)
+            + "\n    additionalProperties: "
             + this.toIndentedString(this.additionalProperties) + "\n}";
    }
 

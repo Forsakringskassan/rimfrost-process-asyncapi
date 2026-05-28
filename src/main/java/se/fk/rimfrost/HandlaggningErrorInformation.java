@@ -17,9 +17,9 @@ public class HandlaggningErrorInformation implements Serializable
 {
    private static final long serialVersionUID = 1L;
 
-   @JsonProperty("felkod")
+   @JsonProperty(required = true)
    private String felkod;
-   @JsonProperty("felmeddelande")
+   @JsonProperty(required = true)
    private String felmeddelande;
    @JsonAnySetter
    @JsonInclude(Include.NON_NULL)
@@ -88,8 +88,7 @@ public class HandlaggningErrorInformation implements Serializable
 
    public String toString()
    {
-      String var10000 = this.toIndentedString(this.felkod);
-      return "class HandlaggningErrorInformation {\n    felkod: " + var10000 + "\n    felmeddelande: "
+      return "class HandlaggningErrorInformation {\n    felkod: " + this.toIndentedString(this.felkod) + "\n    felmeddelande: "
             + this.toIndentedString(this.felmeddelande) + "\n    additionalProperties: "
             + this.toIndentedString(this.additionalProperties) + "\n}";
    }

@@ -2,7 +2,6 @@ package se.fk.rimfrost;
 
 import java.io.Serializable;
 import java.util.HashMap;
-import io.cloudevents.*;
 import edu.umd.cs.findbugs.annotations.SuppressFBWarnings;
 
 import com.fasterxml.jackson.annotation.JsonAnyGetter;
@@ -62,7 +61,7 @@ public class HandlaggningResponseMessagePayload implements Serializable
    @JsonProperty("kogitoprocrefid")
    @JsonInclude(Include.NON_NULL)
    private String kogitoprocrefid;
-   @JsonProperty("data")
+   @JsonProperty(required = true)
    private HandlaggningResponseMessageData data;
    @JsonAnySetter
    @JsonInclude(Include.NON_NULL)
@@ -273,8 +272,8 @@ public class HandlaggningResponseMessagePayload implements Serializable
 
    public String toString()
    {
-      String var10000 = this.toIndentedString(this.specversion);
-      return "class HandlaggningResponseMessagePayload {\n    specversion: " + var10000 + "\n    id: "
+      return "class HandlaggningResponseMessagePayload {\n    specversion: " + this.toIndentedString(this.specversion)
+            + "\n    id: "
             + this.toIndentedString(this.id) + "\n    source: " + this.toIndentedString(this.source) + "\n    type: "
             + this.toIndentedString(this.type) + "\n    time: " + this.toIndentedString(this.time) + "\n    kogitoparentprociid: "
             + this.toIndentedString(this.kogitoparentprociid) + "\n    kogitorootprocid: "
