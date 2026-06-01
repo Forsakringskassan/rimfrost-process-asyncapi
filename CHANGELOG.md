@@ -1,12 +1,24 @@
+# rimfrost-process-asyncapi changelog
+
+Changelog of rimfrost-process-asyncapi.
+
+## 1.2.1 (2026-06-01)
+
+### Bug Fixes
+
+-  specversion and required jsonannotation ([7bf8b](https://github.com/Forsakringskassan/rimfrost-process-asyncapi/commit/7bf8b3fff15daf3) Nils Elveros)  
+-  small changes to pom ([b383c](https://github.com/Forsakringskassan/rimfrost-process-asyncapi/commit/b383c54fffb3a32) Nils Elveros)  
+-  Fix mvnw permissions and add .mvn folder ([aec1f](https://github.com/Forsakringskassan/rimfrost-process-asyncapi/commit/aec1f8655dccd84) Lars Persson)  
+-  changed to maven and dont generate classes ([a60df](https://github.com/Forsakringskassan/rimfrost-process-asyncapi/commit/a60dfe6813fb9e7) Nils Elveros)  
+
+### Dependency updates
+
+- update gradle to v9.5.1 ([f0d75](https://github.com/Forsakringskassan/rimfrost-process-asyncapi/commit/f0d75175c783aa3) renovate[bot])  
 ## 1.2.0 (2026-05-08)
 
 ### Features
 
 -  Cleanup CHANGELOG.md and bump version number ([d1182](https://github.com/Forsakringskassan/rimfrost-process-asyncapi/commit/d1182cc53af2387) Lars Persson)  
-
-# rimfrost-process-asyncapi changelog
-
-Changelog of rimfrost-process-asyncapi.
 
 ## 1.1.0 (2026-05-06)
 
@@ -69,26 +81,26 @@ Changelog of rimfrost-process-asyncapi.
 
 ### Bug Fixes
 
--  Rename kundbehovsflode to handlaggning ([89926](https://github.com/Forsakringskassan/rimfrost-process-asyncapi/commit/89926dbb3591107) Lars Persson)
+-  Rename kundbehovsflode to handlaggning ([89926](https://github.com/Forsakringskassan/rimfrost-process-asyncapi/commit/89926dbb3591107) Lars Persson)  
 
 ## 0.1.2 (2025-11-25)
 
 ### Bug Fixes
 
--  format uuid as uuid ([a980a](https://github.com/Forsakringskassan/rimfrost-process-asyncapi/commit/a980ae7fd9d0602) Nils Elveros)
+-  format uuid as uuid ([a980a](https://github.com/Forsakringskassan/rimfrost-process-asyncapi/commit/a980ae7fd9d0602) Nils Elveros)  
 
 ## 0.1.1 (2025-11-24)
 
 ### Bug Fixes
 
--  Cloudevent i Vah Kundflödesbehov request ([9d5d1](https://github.com/Forsakringskassan/rimfrost-process-asyncapi/commit/9d5d16d85ca1cf5) Ulf Slunga)
+-  Cloudevent i Vah Kundflödesbehov request ([9d5d1](https://github.com/Forsakringskassan/rimfrost-process-asyncapi/commit/9d5d16d85ca1cf5) Ulf Slunga)  
 
 ## 0.1.0 (2025-11-20)
 
 ### Bug Fixes
 
--  resultat required ([e5e84](https://github.com/Forsakringskassan/rimfrost-process-asyncapi/commit/e5e84f2152454c2) Ulf Slunga)
--  x permissions gradlew ([f1b6e](https://github.com/Forsakringskassan/rimfrost-process-asyncapi/commit/f1b6e4d0f64d253) Ulf Slunga)
+-  resultat required ([e5e84](https://github.com/Forsakringskassan/rimfrost-process-asyncapi/commit/e5e84f2152454c2) Ulf Slunga)  
+-  x permissions gradlew ([f1b6e](https://github.com/Forsakringskassan/rimfrost-process-asyncapi/commit/f1b6e4d0f64d253) Ulf Slunga)  
 
 ### Other changes
 
@@ -141,6 +153,5 @@ Changelog of rimfrost-process-asyncapi.
 
 
 [3ac14](https://github.com/Forsakringskassan/rimfrost-process-asyncapi/commit/3ac14994cd56a00) Ulf Slunga *2025-11-20 07:06:09*
-
 
 
