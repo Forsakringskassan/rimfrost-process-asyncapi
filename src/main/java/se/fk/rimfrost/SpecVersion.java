@@ -1,8 +1,11 @@
 package se.fk.rimfrost;
 
+import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonValue;
+
 public enum SpecVersion
 {
-   V1("1.0")
+   V1("1.0");
 
    private String value;
 
