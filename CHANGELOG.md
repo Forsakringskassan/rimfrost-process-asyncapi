@@ -2,6 +2,20 @@
 
 Changelog of rimfrost-process-asyncapi.
 
+## 1.2.2 (2026-06-02)
+
+### Bug Fixes
+
+-  specverison as 1.0 instead of v1 ([dc4e3](https://github.com/Forsakringskassan/rimfrost-process-asyncapi/commit/dc4e34aae8ba5c8) Nils Elveros)  
+
+### Other changes
+
+**small fix**
+
+
+[b8015](https://github.com/Forsakringskassan/rimfrost-process-asyncapi/commit/b80150f791f1ecb) Nils Elveros *2026-06-02 11:34:13*
+
+
 ## 1.2.1 (2026-06-01)
 
 ### Bug Fixes
