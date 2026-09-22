@@ -2,6 +2,17 @@
 
 Changelog of rimfrost-process-asyncapi.
 
+## 1.2.3 (2026-08-29)
+
+### Bug Fixes
+
+-  **deps**  update jackson monorepo to v2.22 ([79ad9](https://github.com/Forsakringskassan/rimfrost-process-asyncapi/commit/79ad927c9e4fdbf) renovate[bot])  
+
+### Dependency updates
+
+- pin forsakringskassan/.github action to d1349e6 ([6cf9e](https://github.com/Forsakringskassan/rimfrost-process-asyncapi/commit/6cf9e2a0566bfca) renovate[bot])  
+## rimfrost-1.1 (2026-06-02)
+
 ## 1.2.2 (2026-06-02)
 
 ### Bug Fixes
