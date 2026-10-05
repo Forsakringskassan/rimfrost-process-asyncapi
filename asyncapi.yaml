@@ -26,30 +26,11 @@ operations:
     reply:
       address:
         description: Resultatet skickas tillbaka till originator.
-        location: "$message.header#/replyTo"
       channel:
         $ref: "#/channels/handlaggning.responses"
 
 components:
   schemas:
-    HandlaggningRequestMessageHeaders:
-      type: object
-      properties:
-        replyTo:
-          type: string
-          description: Topic där response ska skickas
-        correlationId:
-          type: string
-          format: uuid
-          description: Unikt ID som kopplar ihop request & response
-
-    HandlaggningResponseMessageHeaders:
-      type: object
-      properties:
-        correlationId:
-          type: string
-          description: Unikt ID som kopplar ihop request & response
-
     HandlaggningRequestMessageData:
       type: object
       title: HandlaggningRequestMessageData
@@ -96,8 +77,6 @@ components:
 
   messages:
     HandlaggningRequestMessage:
-      headers:
-        $ref: "#/components/schemas/HandlaggningRequestMessageHeaders"
       payload:
         title: HandlaggningRequestMessagePayload
         allOf:
@@ -111,8 +90,6 @@ components:
                 $ref: "#/components/schemas/HandlaggningRequestMessageData"
 
     HandlaggningResponseMessage:
-      headers:
-        $ref: "#/components/schemas/HandlaggningResponseMessageHeaders"
       payload:
         title: HandlaggningResponseMessagePayload
         allOf:
