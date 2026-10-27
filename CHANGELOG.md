@@ -2,6 +2,19 @@
 
 Changelog of rimfrost-process-asyncapi.
 
+## 1.2.4 (2026-10-27)
+
+### Bug Fixes
+
+-  replace inline workflow jobs with delegating call to shared bundle-maven-lib workflows ([d3a40](https://github.com/Forsakringskassan/rimfrost-process-asyncapi/commit/d3a4069d7a60ede) Ulf Slunga)  
+-  remove message header schemas from AsyncAPI spec ([7ae95](https://github.com/Forsakringskassan/rimfrost-process-asyncapi/commit/7ae95f46262a4ee) Ulf Slunga)  
+
+### Dependency updates
+
+- update forsakringskassan/.github digest to cbd74f1 ([e7b1f](https://github.com/Forsakringskassan/rimfrost-process-asyncapi/commit/e7b1fd2cb0b8dd5) renovate[bot])  
+- update forsakringskassan/.github digest to bfb01f7 ([12d9d](https://github.com/Forsakringskassan/rimfrost-process-asyncapi/commit/12d9d9d736face6) renovate[bot])  
+## rimfrost-1_2 (2026-09-22)
+
 ## 1.2.3 (2026-08-29)
 
 ### Bug Fixes
