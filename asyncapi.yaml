@@ -40,7 +40,7 @@ components:
         handlaggningId:
           type: string
           format: uuid
-          description: Unikt ID som identifierar handläggningsärendet
+          description: Unikt ID som identifierar handläggningsärendet. Får inte vara null.
 
     HandlaggningErrorInformation:
       type: object
@@ -66,7 +66,7 @@ components:
         handlaggningId:
           type: string
           format: uuid
-          description: Unikt ID som identifierar handläggningsärendet
+          description: Unikt ID som identifierar handläggningsärendet. Får inte vara null.
         resultat:
           type: string
           description: Utfall av handläggningen, t.ex. GODKÄND eller EJ GODKÄND. Vid fel sätts värdet till FEL.
