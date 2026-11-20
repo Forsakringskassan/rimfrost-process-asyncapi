@@ -38,7 +38,7 @@ public class HandlaggningResponseMessageData implements Serializable
    @JsonCreator
    public HandlaggningResponseMessageData(@JsonProperty(value = "handlaggningId", required = true) String handlaggningId)
    {
-      this.handlaggningId = handlaggningId;
+      this.handlaggningId = Objects.requireNonNull(handlaggningId, "handlaggningId must not be null");
    }
 
    public String getHandlaggningId()
